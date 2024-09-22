@@ -16,5 +16,8 @@ header{
 	padding: 2%;
 }
 .my_player{
-	width: 800px;
+	margin: 2% 0;
+}
+.logo , .img{
+	margin: 0 auto;
 }
