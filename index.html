@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Радио Станция FMD</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header_left">
+            <div class="moscow-time">
+                <span class="moscow">Московское время</span>
+                <span class="eng">Moscow Time</span>
+            </div>
+            <div class="time" id="clock">12:48</div>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="FMD Лого" class="logo-img">
+        </div>
+        <div class="social-icons">
+            <a href="https://vk.com" target="_blank"><img src="img/vk.png" alt="VK"></a>
+            <a href="https://telegram.org" target="_blank"><img src="img/tg.png" alt="Telegram"></a>
+            <a href="https://dzen.ru" target="_blank"><img src="img/Dzen.png" alt="YouTube"></a>
+        </div>
+    </header>
+
+    <!-- Бегущая строка -->
+    <div class="marquee">
+        <span>Радио Famous Music Donbass. Если тебя нет в плейлистах FMD, то тебя нет нигде.</span>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="content">
+
+        <!-- Player блок -->
+        <div class="player-block">
+            <h3>Radio Famous Music Donbass <br>
+            Если тебя нет в плейлистах FMD, то тебя нет нигде</h3>
+            <div class="cover_song" data-myinfo="img" style="width:200px; height:200px; background-size:cover;"></div>
+            <!--VISUALIZER - Блок расположения визуализации. Цвета: rgb, red, blue или green  (можно несколько) -->
+                <canvas class="my_visualizer" width=200 height=128 data-size=64 data-revert=0 data-color="rgb"></canvas>
+            <!--END VISUALIZER-->
+            <div id="my_player_custom" class="my_player" data-player="custom" data-streamurl="https://myradio24.org/fmd"></div>
+ 
+            <div id="my_player_custom_html" style="display:none;" data-imagesurl="{'play':'./img/play.png','pause':'./img/pause.png'}">
+
+                <div class="my_play"></div>
+                <div class="my_timer" style="width:64px; font:26px Arial; color:#000000; display: none;">00:00</div>
+                <div data-myinfo="song" class="current_song"></div>
+                <div class="my_volumediv" style="width:64px; height:7px; position:relative; margin:5px 0; background:#333; border-radius:3px; cursor:pointer; user-select: none;">
+                    <div class="my_volume" style="width:64px; height:5px; position:absolute; bottom:0px; border:1px solid gray; background:#fff; border-radius:3px; cursor:pointer;"></div>
+                    <div class="my_volumecursor" style="position:absolute; top:-8px; left:-2px; width:11px; height:21px; background:url('https://myradio24.com/player/demo/cursor.png'); background-size:cover; cursor:pointer;"></div>
+                </div>
+                
+            </div>
+            <div class="my_loading" style="width:64px; font:16px Arial; color:#000000;"></div>
+                   
+        </div>
+
+
+
+        <!-- Playlist блок -->
+        <div class="playlist-block">
+            <h3>Последние треки</h3>
+            <!--SONGS -->
+            <div class="my_lastsongs" data-revert=1 style="display:inline-block; max-width:500px;">
+                <div class="my_lastsonghtml" style="display:none;">
+                    <div style="display: flex; gap:8px; align-items: center; text-align:left; margin:3px;">
+                        <img class="my_lastsong_cover" style="width:45px; height:45px; border-radius:4px; vertical-align:middle;">
+                        <span class="song_time">%songtime%</span>
+                        <span class="song_name">%song%</span>
+                        <!-- <a href="https://www.youtube.com/results?search_query=%songencode%" target="_blank" title="Найти на YouTube">%song%</a>  -->
+                        <span class='vm_postLikes vm_likes vm_like_318761878_%songid%' data-likeid='318761878_%songid%'></span>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <!--END SONGS-->
+
+
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Установить свои ссылки!-->
+        <a href="rules.html" target="_blank">Правила радио</a>
+        <a href="agreement.pdf" download>Скачать соглашение на ротацию треков</a>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="./script/script.js"></script>
+    <script src="https://myradio24.com/player/player.js?v3.28" data-port="fmd" data-interval="15" data-vmid="0"></script>
+
+</body>
+</html>
