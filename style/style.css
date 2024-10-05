@@ -1,0 +1,256 @@
+@import url(./font.css);
+*{
+    box-sizing: border-box;
+}
+body {
+    background: url('../img/back.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+h2, h3 {
+    text-align: center;
+    color: white;
+    font-family:"Haettenschweiler", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.moscow-time {
+    display: flex;
+    flex-direction: column;
+    align-items: right; 
+    text-transform: uppercase;
+    color: white;
+    font-family: "5mal6Lampen", sans-serif;
+    font-size: 2em;
+}
+.eng {
+    font-size: 2em;
+}
+
+.header_left{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.time-container {
+
+}
+
+
+
+.time {
+    font-size: 4em;
+    font-family: '5mal6Lampen', 'Courier', monospace;
+    color: #fbff9c; /* Основной цвет текста */
+    margin: 0 2%;
+    letter-spacing: -5px;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1); 
+    background-image: url(../img/back_time.png);
+    background-size: cover;
+    padding: 2%;
+    text-align: center;
+}
+
+.logo{
+    flex-grow: 2;
+}
+
+.logo-img {
+    max-height: 100px;
+}
+
+.social-icons{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.social-icons a {
+    display: block;
+}
+
+.marquee {
+    font-size: 6em;
+    color: #fbff9c;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: "5mal6Lampen", sans-serif;
+    position: relative;
+    top: -25px;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+    text-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1); 
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.player-block, .playlist-block {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 48%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+.cover_song{
+    margin: 0 auto;
+}
+.my_play{
+    width:60px; 
+    height:60px; 
+    background-image:url('../img/play.png');
+    background-size: cover;
+    border:1px solid white;
+    border-radius: 100%;
+
+}
+
+.current_song{
+    font-family:"Haettenschweiler", sans-serif;
+    text-decoration: underline;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.playlist-block{
+    overflow-y:scroll;
+    max-height: 600px;
+}
+.song_time, .song_name{
+    font-family: "Haettenschweiler", sans-serif;
+    font-size: 1.6em;
+}
+
+.song_name{
+    color: #a5d0fb;
+    text-decoration: underline;
+}
+#my_player_custom{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.now-playing-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+
+.album-cover {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.now-playing-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    top: 300px;
+    left: -50px;
+}
+
+
+
+
+#volume-control {
+    width: 150px;
+    margin-left: 10px;
+}
+
+.visualizer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+canvas.my_visualizer {
+    background-color: transparent; 
+    border: none;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 1% 0;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    margin: 0 50px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "vsc", sans-serif;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .player-block, .playlist-block {
+        width: 100%;
+    }
+}

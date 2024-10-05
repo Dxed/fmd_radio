@@ -1,0 +1,18 @@
+@font-face {
+    font-family: '5mal6Lampen';
+    src: url('../font/5mal6Lampen.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Haettenschweiler';
+    src: url('../font/haettenschweiler.ttf') format('truetype'); /* Укажите правильный путь к файлу шрифта */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'VSC';
+    src: url('../font/vsc.ttf') format('truetype'); /* Укажите правильный путь к файлу шрифта */
+    font-weight: normal;
+    font-style: normal;
+}
