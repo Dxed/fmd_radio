@@ -24,13 +24,21 @@
   }
 }
 @media (max-width: 600px){
-   .player-block, .playlist-block {
+  .logo-img{
+    width: 100%;
+  }
+  .player-block, .playlist-block {
         width: 90%;
-    }
+  }
   #my_player_custom{
     flex-direction: column;
   }
   .current_song{
     flex-basis: auto;
+  }
+}
+@media (max-width: 450px){
+  .header_left{
+    flex-direction: column;
   }
 }
