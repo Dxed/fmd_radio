@@ -54,6 +54,10 @@ p {
     font-family: "5mal6Lampen", sans-serif;
     font-size: 2em;
 }
+.moscow-time p{
+    margin: 0;
+    text-align: left;
+}
 .eng {
     font-size: 2em;
 }
