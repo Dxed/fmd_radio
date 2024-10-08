@@ -105,10 +105,9 @@ p {
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    box-sizing: border-box;
     font-family: "5mal6Lampen", sans-serif;
-    position: relative;
-    top: -25px;
+    /*position: relative;
+    top: -25px;*/
 }
 
 .marquee span {
@@ -223,7 +222,13 @@ canvas.my_visualizer {
     background-color: transparent; 
     border: none;
 }
-
+.last_song{
+    display: flex; 
+    gap:8px; 
+    align-items: center; 
+    text-align:left; 
+    margin:3px;
+}
 
 .footer {
    justify-content: center;

@@ -38,7 +38,18 @@
   }
 }
 @media (max-width: 450px){
+  .player-block, .playlist-block {
+        width: 100%;
+  }
   .header_left{
     flex-direction: column;
+  }
+  .last_song{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .song_name{
+    text-align: center;
   }
 }
