@@ -2,6 +2,17 @@
 *{
     box-sizing: border-box;
 }
+
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 body {
     background: url('../img/back.png') no-repeat center center fixed;
     background-size: cover;
@@ -52,13 +63,6 @@ p {
     align-items: center;
     flex-grow: 1;
 }
-
-.time-container {
-
-}
-
-
-
 .time {
     font-size: 4em;
     font-family: '5mal6Lampen', 'Courier', monospace;
@@ -110,15 +114,6 @@ p {
     text-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1); 
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
 
 .content {
     display: flex;
@@ -140,9 +135,15 @@ p {
 .cover_song{
     margin: 0 auto;
 }
+.my_play_wrapper{
+    flex: 0 1 100px;
+    text-align: left;
+}
 .my_play{
-    width:60px; 
-    height:60px; 
+    min-width:60px; 
+    width: 60px;
+    min-height:60px;
+    height: 60px; 
     background-image:url('../img/play.png');
     background-size: cover;
     border:1px solid white;
@@ -156,6 +157,11 @@ p {
     font-size: 1.5em;
     letter-spacing: 2px;
     text-align: center;
+    padding: 0 2%;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 300px;
+    
 }
 .playlist-block{
     overflow-y:scroll;
@@ -176,16 +182,17 @@ p {
     justify-content: space-between;
 }
 
-
-
-
-.now-playing-container {
+.volume_wrapper{
+    flex: 0 1 100px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 20px;
+    flex-basis: 80px;
 }
-
+.volume_wrapper img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
 
 .album-cover {
     width: 100px;
@@ -193,17 +200,6 @@ p {
     border-radius: 10px;
     margin-right: 20px;
     object-fit: cover;
-}
-
-.now-playing-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    position: relative;
-    top: 300px;
-    left: -50px;
 }
 
 
@@ -226,9 +222,11 @@ canvas.my_visualizer {
 
 
 .footer {
-    text-align: center;
+   justify-content: center;
     padding: 1% 0;
     width: 100%;
+    text-align: center;
+    display: flex;
 }
 
 .footer a {
@@ -244,13 +242,3 @@ canvas.my_visualizer {
 }
 
 
-@media (max-width: 1200px) {
-    .content {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .player-block, .playlist-block {
-        width: 100%;
-    }
-}
