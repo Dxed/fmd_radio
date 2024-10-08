@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Радио Станция FMD</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" type="text/css"  href="./style/style.css">
+    <link rel="stylesheet" type="text/css" href="./style/media.css">
 </head>
 <body>
 
@@ -21,9 +22,9 @@
             <img src="img/logo.png" alt="FMD Лого" class="logo-img">
         </div>
         <div class="social-icons">
-            <a href="https://vk.com" target="_blank"><img src="img/vk.png" alt="VK"></a>
-            <a href="https://telegram.org" target="_blank"><img src="img/tg.png" alt="Telegram"></a>
-            <a href="https://dzen.ru" target="_blank"><img src="img/Dzen.png" alt="YouTube"></a>
+            <a href="https://vk.com/f_music_donbass" target="_blank"><img src="img/vk.png" alt="VK"></a>
+            <a href="https://t.me/f_music_donbass" target="_blank"><img src="img/tg.png" alt="Telegram"></a>
+            <a href="https://dzen.ru/famous_music_donbass" target="_blank"><img src="img/Dzen.png" alt="YouTube"></a>
         </div>
     </header>
 
@@ -37,8 +38,8 @@
 
         <!-- Player блок -->
         <div class="player-block">
-            <h3>Radio Famous Music Donbass <br>
-            Если тебя нет в плейлистах FMD, то тебя нет нигде</h3>
+            <h3>Первая станция большого пути</h3>
+            <!-- Если тебя нет в плейлистах FMD, то тебя нет нигде -->
             <div class="cover_song" data-myinfo="img" style="width:200px; height:200px; background-size:cover;"></div>
             <!--VISUALIZER - Блок расположения визуализации. Цвета: rgb, red, blue или green  (можно несколько) -->
                 <canvas class="my_visualizer" width=200 height=128 data-size=64 data-revert=0 data-color="rgb"></canvas>
@@ -46,13 +47,17 @@
             <div id="my_player_custom" class="my_player" data-player="custom" data-streamurl="https://myradio24.org/fmd"></div>
  
             <div id="my_player_custom_html" style="display:none;" data-imagesurl="{'play':'./img/play.png','pause':'./img/pause.png'}">
-
-                <div class="my_play"></div>
+                <div class="my_play_wrapper">
+                    <div class="my_play"></div>
+                </div>
                 <div class="my_timer" style="width:64px; font:26px Arial; color:#000000; display: none;">00:00</div>
                 <div data-myinfo="song" class="current_song"></div>
-                <div class="my_volumediv" style="width:64px; height:7px; position:relative; margin:5px 0; background:#333; border-radius:3px; cursor:pointer; user-select: none;">
-                    <div class="my_volume" style="width:64px; height:5px; position:absolute; bottom:0px; border:1px solid gray; background:#fff; border-radius:3px; cursor:pointer;"></div>
-                    <div class="my_volumecursor" style="position:absolute; top:-8px; left:-2px; width:11px; height:21px; background:url('https://myradio24.com/player/demo/cursor.png'); background-size:cover; cursor:pointer;"></div>
+                <div class="volume_wrapper">
+                    <img src="./img/volume.png">
+                    <div class="my_volumediv" style="width:70px; height:8px; position:relative; margin:5px 0; background:#333; border-radius:3px; cursor:pointer; user-select: none;">
+                        <div class="my_volume" style="width:50px; height:8px; position:absolute; bottom:0px;  background:#396ad0; border-radius:3px; cursor:pointer;"></div>
+                        <div class="my_volumecursor" style="position:absolute; top:-4px; left:-2px; width:15px; height:15px; background:url('./img/control_volume.png'); background-size:cover; cursor:pointer;"></div>
+                    </div>
                 </div>
                 
             </div>
@@ -89,8 +94,8 @@
     <!-- Footer -->
     <footer class="footer">
         <!-- Установить свои ссылки!-->
-        <a href="rules.html" target="_blank">Правила радио</a>
-        <a href="agreement.pdf" download>Скачать соглашение на ротацию треков</a>
+        <a href="./docs/FMD_rules.docx" target="_blank">Правила радио</a>
+        <a href="./docs/FMD_application.docx" download>Заявка на ротацию треков</a>
     </footer>
 
     <!-- JS Script -->
